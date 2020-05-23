@@ -1,0 +1,17 @@
+public class Epidemic {
+  private double mortalityrate_epi;
+  private int coordinates_epi;
+  
+  public int getcoordinates_epi(){
+   return coordinates_epi;
+   }
+   public void setcoordinates_epi(int coordinates_epi){
+   this.coordinates_epi=coordinates_epi;
+   }
+    public double getmortalityrate_epi() {
+    return mortalityrate_epi;
+  }
+  public void setmortalityrate_epi(double mortalityrate_epi) {
+    this.mortalityrate_epi = mortalityrate_epi;
+	}
+	}

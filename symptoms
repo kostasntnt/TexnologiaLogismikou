@@ -1,0 +1,24 @@
+public class Symptoms {
+  private String name_sym;
+  private int code_sym;
+  private string description_sym;
+  
+  public String getdescription_sym(){
+   return description_sym;
+   }
+   public void setdescription_sym(String description_sym){
+   this.description_sym=description_sym;
+   }
+    public String getname_sym() {
+    return name_sym;
+  }
+  public void setname_all(String name_sym) {
+    this.name_sym = name_sym;
+	}
+	public int getcode_sym() {
+    return code_sym;
+  }
+  public void setcode_sym(int code_sym) {
+    this.code_sym = code_sym;
+	}
+	}

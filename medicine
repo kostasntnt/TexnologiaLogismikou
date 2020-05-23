@@ -1,0 +1,31 @@
+public class Medicine {
+  private String name_med;
+  private double milligram_med;
+  private string sideeffects_med;
+  private string activesub_med;
+  
+  public String getsideeffects_med(){
+   return sideeffects_med;
+   }
+   public void setsideeffects_med(String sideeffects_med){
+   this.sideeffects_med =sideeffects_med;
+   }
+    public String getname_med() {
+    return name_med;
+  }
+  public void setname_med(String name_med) {
+    this.name_med = name_med;
+	}
+	public double getmilligram_med() {
+    return milligram_med;
+  }
+  public void setmilligram_med(double milligram_med) {
+    this.milligram_med = milligram_med;
+	}
+	 public String getactivesub_med(){
+   return activesub_med;
+   }
+   public void setactivesub_med(String activesub_med){
+   this.activesub_med =activesub_med;
+   }
+	}

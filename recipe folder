@@ -1,0 +1,27 @@
+public class Recipe folder {
+  
+     private String date_rec;
+    private String time_rec;
+     private int code_rec;
+	 public int getcode_drec(){
+   return code_rec;
+   }
+   public void setcode_rec(int code_rec){
+   this.code_rec=code_rec;
+   }
+   
+    public String getDate_rec() { return date_rec; }
+
+    public void setDate_rec(String date_rec) { this.date_rec = date_rec; }
+
+    public String getTime_rec() { return this.time_rec; }
+
+    public void setTime_rec(String time_rec) { this.time_rec = time_rec; }
+
+    public void processDateTime_rec() {
+        date_rec  = new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime_rec());
+        this.setDate_rec(date_rec);
+        time_rec  = new SimpleDateFormat("HH-mm-ss").format(Calendar.getInstance().getTime_rec());
+        this.setTime_rec(time_rec);
+        System.out.println("PROCESS " + date + " : " + time);
+    }

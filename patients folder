@@ -1,0 +1,52 @@
+public class PatientsFolder{
+  private string firstname_paf;
+  private string lastname_paf;
+  private srring address_paf;
+  private string description_paf;
+  private int phone_paf;
+  private  int registnub_paf;
+  private string record_paf;
+  
+  public String getdescription_paf(){
+   return description_paf;
+   }
+   public void setdescription_paf(String description_paf){
+   this.description_paf=description_paf;
+   }
+    public String getfirstname_paf() {
+    return firstname_paf;
+  }
+  public void setfirstname_paf(String firstname_paf) {
+    this.firstname_paf = firstname_paf;
+	}
+ public String getlastname_paf() {
+    return lastname_paf;
+  }
+  public void setlastname_paf(String lastname_paf) {
+    this.lastname_paf = lastname_paf;
+	}
+public String getaddress_paf(){
+   return address_paf;
+   }
+   public void setaddress_paf(String address_paf){
+   this.address_paf=address_paf;
+   }
+    public int getphone_paf(){
+   return phone_paf;
+   }
+   public void setphone_paf(int phone_paf){
+   this.phone_paf=phone_paf;
+   }
+    public int getregistnub_paf(){
+   return registnub_paf;
+   }
+   public void setregistnub_paf(int registnub_paf){
+   this.registnub_paf=registnub_paf;
+   }
+    public String getdrecord_paf(){
+   return record_paf;
+   }
+   public void setrecord_paf(String record_paf){
+   this.record_paf=record_paf;
+   }
+   

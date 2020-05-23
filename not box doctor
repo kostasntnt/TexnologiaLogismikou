@@ -1,0 +1,10 @@
+public class NotBoxDoctor {
+  private String frametitle_nbd;
+  
+  public String getframetitle_nbd(){
+   return frametitle_nbd;
+   }
+   public void setframetitle_nbd(String frametitle_nbd){
+   this.frametitle_nbd=frametitle_nbd;
+	}
+	}

@@ -1,0 +1,38 @@
+ public class Pharmacy {
+  private String name_pha;
+  private string address_pha;
+  private int phone_pha;
+  private int coordinates_pha;
+  private int workingdays_pha[]
+  
+  public String getaddress_pha(){
+   return address_pha;
+   }
+   public void setaddress_pha(String address_pha){
+   this.address_pha=address_pha;
+   }
+    public String getname_pha(){
+   return name_pha;
+   }
+   public void setname_pha(String name_pha){
+   this.name_pha=name_pha;
+   }
+    public int getphone_pha(){
+   return phone_pha;
+   }
+   public void setphone_pha(int phone_pha){
+   this.phone_pha=phone_pha;
+   }
+     public int getcoordinates_pha(){
+   return coordinates_pha;
+   }
+   public void setcoordinates_pha(int coordinates_pha){
+   this.coordinates_pha=coordinates_pha;
+   }
+   public int getworkingdays_pha[]{
+    return workingdays_pha[] ;
+  }
+  public void setworkingdays_pha[](int workingdays_pha[])
+  thi.workingdays_pha[]=workingdays_pha[]
+  }
+  }

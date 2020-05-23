@@ -1,0 +1,24 @@
+  public class Patient {
+  private String username_pat;
+  private string password_pat;
+  private string email_pat ;
+  
+  public String getpassword_pat(){
+   return password_pat;
+   }
+   public void setpassword_pat(String password_pat){
+   this.password_pat=password_pat;
+   }
+  public String getusername_pat() {
+    return username_pat;
+  }
+  public void setusername_pat(String username_pat) {
+    this.username_pat = username_pat;
+	}
+  public String getemail_pat(){
+   return email_pat
+   }
+   public void setemail_pat(String email_pat){
+   this.email.pat= email_pat;
+   }
+   }

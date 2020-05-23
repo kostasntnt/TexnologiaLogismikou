@@ -1,0 +1,17 @@
+  public class Doctor {
+  private String username_doc;
+  private string password_doc;
+  
+  public String getpassword_doc(){
+   return password_doc;
+   }
+   public void setpassword_doc(String password_doc){
+   this.password_doc=password_doc;
+   }
+    public String getusername_doc() {
+    return username_doc;
+  }
+  public void setusername_doc(String username_doc) {
+    this.username_doc = username_doc;
+	}
+	}

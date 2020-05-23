@@ -1,0 +1,17 @@
+public class Pandemic {
+  private double mortalityrate_pan;
+  private int coordinates_pan;
+  
+  public int getcoordinates_pan(){
+   return coordinates_pan;
+   }
+   public void setcoordinates_pan(int coordinates_pan){
+   this.coordinates_pan=coordinates_pan;
+   }
+    public double getmortalityrate_pan() {
+    return mortalityrate_pan;
+  }
+  public void setmortalityrate_pan(double mortalityrate_pan) {
+    this.mortalityrate_pan = mortalityrate_pan;
+	}
+	}
