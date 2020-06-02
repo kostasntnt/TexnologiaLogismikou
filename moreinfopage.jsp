@@ -1,3 +1,8 @@
+<%@ page import="java.util.*, com.package1.Patient, com.package1.PatientDAO   "  %>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="java.sql.*" %>
 <htlm>
 <style>
 body {
@@ -29,24 +34,209 @@ body {
 <br>
 
 <table style="width:100%">
+   
+
+
+       
 
 <td>
-Name:
+Name:                 <%
+     String getlastname =request.getParameter("pat1");
+  //   out.println(getlastname);
+          try{
+         java.sql.Driver d=new com.mysql.jdbc.Driver();
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/texnologialog", "root" ,"");
+       Statement stmt = null;
+
+       stmt = con.createStatement();
+String sql = "SELECT * FROM patient WHERE lastname_pat='"+getlastname +"'";
+ ResultSet rs = stmt.executeQuery(sql);
+ while(rs.next()){
+          out.println(rs.getString("firstname_pat"));
+          out.println("<br>");
+          }
+          
+
+          }
+          
+          
+   catch(Exception ex){
+   ex.getMessage();
+   }      
+      
+      
+      %>
+
 <br>
 <br>
 LastName:
+                 <%
+     String getlastname2 =request.getParameter("pat1");
+  //   out.println(getlastname);
+          try{
+         java.sql.Driver d=new com.mysql.jdbc.Driver();
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/texnologialog", "root" ,"");
+       Statement stmt = null;
+
+       stmt = con.createStatement();
+String sql = "SELECT * FROM patient WHERE lastname_pat='"+getlastname2 +"'";
+ ResultSet rs = stmt.executeQuery(sql);
+ while(rs.next()){
+          out.println(rs.getString("lastname_pat"));
+          out.println("<br>");
+          }
+          
+
+          }
+          
+          
+   catch(Exception ex){
+   ex.getMessage();
+   }      
+      
+      
+      %>
+
 <br>
 <br>
-Address:
+Address:                <%
+     String getlastname3 =request.getParameter("pat1");
+  //   out.println(getlastname);
+          try{
+         java.sql.Driver d=new com.mysql.jdbc.Driver();
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/texnologialog", "root" ,"");
+       Statement stmt = null;
+
+       stmt = con.createStatement();
+String sql = "SELECT * FROM patient WHERE lastname_pat='"+getlastname3 +"'";
+ ResultSet rs = stmt.executeQuery(sql);
+ while(rs.next()){
+          out.println(rs.getString("address_pat"));
+          out.println("<br>");
+          }
+          
+
+          }
+          
+          
+   catch(Exception ex){
+   ex.getMessage();
+   }      
+      
+      
+      %>
 <br>
 <br>
-E-mail:
+E-mail:                <%
+     String getlastname4 =request.getParameter("pat1");
+  //   out.println(getlastname);
+          try{
+         java.sql.Driver d=new com.mysql.jdbc.Driver();
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/texnologialog", "root" ,"");
+       Statement stmt = null;
+
+       stmt = con.createStatement();
+String sql = "SELECT * FROM patient WHERE lastname_pat='"+getlastname4 +"'";
+ ResultSet rs = stmt.executeQuery(sql);
+ while(rs.next()){
+          out.println(rs.getString("email_pat"));
+          out.println("<br>");
+          }
+          
+
+          }
+          
+          
+   catch(Exception ex){
+   ex.getMessage();
+   }      
+      
+      
+      %>
 <br>
 <br>
-Age:
+Age:                <%
+     String getlastname5 =request.getParameter("pat1");
+  //   out.println(getlastname);
+          try{
+         java.sql.Driver d=new com.mysql.jdbc.Driver();
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/texnologialog", "root" ,"");
+       Statement stmt = null;
+
+       stmt = con.createStatement();
+String sql = "SELECT * FROM patient WHERE lastname_pat='"+getlastname5 +"'";
+ ResultSet rs = stmt.executeQuery(sql);
+ while(rs.next()){
+          out.println(rs.getInt("age_pat"));
+          out.println("<br>");
+          }
+          
+
+          }
+          
+          
+   catch(Exception ex){
+   ex.getMessage();
+   }      
+      
+      
+      %>
 <br>
 <br>
-Gender:
+Gender:                <%
+     String getlastname6 =request.getParameter("pat1");
+  //   out.println(getlastname);
+          try{
+         java.sql.Driver d=new com.mysql.jdbc.Driver();
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/texnologialog", "root" ,"");
+       Statement stmt = null;
+
+       stmt = con.createStatement();
+String sql = "SELECT * FROM patient WHERE lastname_pat='"+getlastname6 +"'";
+ ResultSet rs = stmt.executeQuery(sql);
+ while(rs.next()){
+          out.println(rs.getString("gender"));
+          out.println("<br>");
+          }
+          
+
+          }
+          
+          
+   catch(Exception ex){
+   ex.getMessage();
+   }      
+      
+      
+      %>
+      <br>
+<br>
+Records:     <%
+     String getlastname7 =request.getParameter("pat1");
+  //   out.println(getlastname);
+          try{
+         java.sql.Driver d=new com.mysql.jdbc.Driver();
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/texnologialog", "root" ,"");
+       Statement stmt = null;
+
+       stmt = con.createStatement();
+String sql = "SELECT * FROM patient WHERE lastname_pat='"+getlastname7 +"'";
+ ResultSet rs = stmt.executeQuery(sql);
+ while(rs.next()){
+          out.println(rs.getString("record_pat"));
+          out.println("<br>");
+          }
+          
+
+          }
+          
+          
+   catch(Exception ex){
+   ex.getMessage();
+   }      
+      
+      
+      %>
 <br>
 <br>
 <br>
@@ -61,6 +251,7 @@ Inster your notes and save them.
 <br>
 <button class="button">Save</button>
 </td>
+
 
 <td>
 Allergies
@@ -107,7 +298,7 @@ Diseases History
   <br>
   <br>
   <br>
-    <th><a href = "index_admin.php">Log out</a> </th>
+    <th><a href = "ArxikhSel.jsp">Log out</a> </th>
    
   </tr>
 </table>
@@ -116,4 +307,5 @@ Diseases History
 
 
 </body>
+
 </html>
