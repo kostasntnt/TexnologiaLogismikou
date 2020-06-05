@@ -1,3 +1,5 @@
+<%@ page import="java.sql.*"%>
+
 <htlm>
 <style>
 body {
@@ -14,7 +16,7 @@ body {
     cursor:pointer;
     overflow: hidden;
     outline:none;
-	font-size: 23px;
+	font-size: 15px;
 }
 
 
@@ -62,91 +64,80 @@ body {
 <br>
 <br>
 
-<table style="width:100%">
-<tr>
-<td>
-<div class="dropdown">
-  <button class="dropbtn">Choose a Disease</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-</td>
-<td>
-<div class="dropdown">
-  <button class="dropbtn">Choose a Symptom</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="dropdown">
-  <button class="dropbtn">Choose an Allergy</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-</td>
-<td>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="dropdown">
-  <button class="dropbtn">Choose an inappropriate Pharmaceutical Product</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<br>
-<br>
-<br>
-<br>
-<button class="button">Show the Solution</button>
-<br>
-<br>
+ <form method="post" action="index.jsp">
+        <td> <div id="div1">
+        <div id="message"></div>
+        <div><u>Please insert the name of a disease you want to get the results</u>
+            <input type="text"  id="disname" name="disname" class="form-control" placeholder="Disease name.." />
+        </div>
+        <br>
+     
+        <button type="submit" name="action"  value="result" class="btn">Show the results</button>
+ </form>
+<br><br><br><br>
 
 <textarea id="w3mission" rows="4" cols="50">
 
+
+  <%
+     String medname =request.getParameter("disname");
+          try{
+         java.sql.Driver d=new com.mysql.jdbc.Driver();
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/texnologialog", "root" ,"");
+        PreparedStatement stmt =con.prepareStatement("SELECT * FROM medicine INNER JOIN dis ON medicine.id_dis=dis.id_dis WHERE (name_dis like ?);");
+        stmt.setString(1, medname+"%" );
+        ResultSet Rs=stmt.executeQuery();
+          while(Rs.next()){
+          out.println(Rs.getString(1)+" "+ Rs.getString(3) + " mg is the best choice for your patient.");
+          
+       
+          }
+          
+          }
+   catch(Exception ex){
+   ex.getMessage();
+   }      
+      
+      
+      %>
+
 </textarea>
-</td>
-</tr>
+      <br><br><br><br>
+      <form method="post" action="index.jsp">
+          <div><u>Please inster the name of symptom yout patient suffers from:</u>
+            <input type="text" id="symname" name="symname" class="form-control" placeholder="Symptom name.."/>			
+        </div>
+                  <br>
+     
+        <button type="submit" name="action1"  value="result1" class="btn">Show the results</button>
+     </form>
+      <br><br><br><br>
+      <textarea id="w3mission2" rows="4" cols="50">
 
-</table>
-
-<table border='2' style="width:8%">
-  <tr>
-  <br>
-  <br>
+  <%
+     String medname1 =request.getParameter("symname");
+          try{
+         java.sql.Driver d=new com.mysql.jdbc.Driver();
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/texnologialog", "root" ,"");
+        PreparedStatement stmt =con.prepareStatement("SELECT * FROM medicine INNER JOIN symptom ON medicine.id_sym=symptom.id_sym WHERE (name_sym like ?);");
+        stmt.setString(1, medname1+"%" );
+        ResultSet Rs=stmt.executeQuery();
+          while(Rs.next()){
+          out.println(Rs.getString(1)+" "+ Rs.getString(3) + " mg is the best choice for your patient.");
+          
+       
+          }
+          
+          }
+   catch(Exception ex){
+   ex.getMessage();
+   }      
+      
+      
+      %>
  
-    <th><a href = "index_admin.php">Log out</a> </th>
-   
-  </tr>
-</table>
+
+</textarea>
+      
 </body>
 </html>
